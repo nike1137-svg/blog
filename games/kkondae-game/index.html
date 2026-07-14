@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>꼰대 상사 당황시키기 🔥</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===== 상단 상태 표시줄 ===== -->
+    <header id="status-bar">
+      <div class="stat" id="stat-score">
+        <span class="stat-label">판 스코어</span>
+        <span class="stat-value"><span id="my-score">0</span> : <span id="boss-score">0</span></span>
+        <span class="stat-sub">나 : 상사 (3선승)</span>
+      </div>
+      <div class="stat" id="stat-chances">
+        <span class="stat-label">남은 기회</span>
+        <span class="stat-value" id="chances-value">10</span>
+        <span class="stat-sub">실패 시 -1</span>
+      </div>
+      <div class="stat" id="stat-time">
+        <span class="stat-label">남은 시간</span>
+        <span class="stat-value" id="time-value">30</span>
+        <span class="stat-sub">전체 제한</span>
+      </div>
+    </header>
+
+    <!-- ===== 시작 화면 ===== -->
+    <section id="start-screen" class="overlay">
+      <h1>😤 꼰대 상사<br />당황시키기</h1>
+      <p class="desc">
+        꼰대 상사가 잔소리를 퍼붓습니다.<br />
+        <b>「성질부리기」 버튼을 미친듯이 연타</b>해서<br />
+        게이지를 꽉 채우면 상사가 당황하며 쭈그러져요!
+      </p>
+      <ul class="rules">
+        <li>⏱ 각 판마다 제한시간 안에 게이지 채우기</li>
+        <li>🏆 5판 3선승이면 최종 승리</li>
+        <li>💥 기회 10번 소진 · 전체 30초 지나도 종료</li>
+      </ul>
+      <button id="start-btn" class="big-btn">게임 시작 🔥</button>
+    </section>
+
+    <!-- ===== 게임 플레이 화면 ===== -->
+    <main id="game-screen" class="hidden">
+
+      <!-- 상사 캐릭터 + 말풍선 -->
+      <div id="stage">
+        <div id="speech-bubble">준비...</div>
+        <div id="boss">
+          <div id="boss-face">😠</div>
+          <div id="boss-body">🧑‍💼</div>
+        </div>
+        <div id="player-shout" class="hidden">그만 좀 하세요!! 🔥</div>
+      </div>
+
+      <!-- 상태 배너 (색 + 문구) -->
+      <div id="state-banner" class="banner-idle">😤 잔소리 방어 준비!</div>
+
+      <!-- 라운드 제한시간 바 -->
+      <div class="bar-wrap">
+        <div class="bar-label">이번 판 남은 시간</div>
+        <div class="bar-track"><div id="round-timer-fill" class="round-fill"></div></div>
+      </div>
+
+      <!-- 연타 게이지 -->
+      <div class="bar-wrap">
+        <div class="bar-label">성질 게이지 <span id="gauge-percent">0%</span></div>
+        <div class="bar-track big"><div id="gauge-fill" class="gauge-fill"></div></div>
+      </div>
+
+      <!-- 연타 버튼 -->
+      <button id="tap-btn" class="big-btn tap" disabled>성질부리기 🔥</button>
+    </main>
+
+    <!-- ===== 결과 화면 ===== -->
+    <section id="result-screen" class="overlay hidden">
+      <div id="result-emoji">🏆</div>
+      <h1 id="result-title">승리!</h1>
+      <p id="result-desc"></p>
+      <button id="restart-btn" class="big-btn">다시 하기 🔄</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+/* ===== 기본 리셋 ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --bg: #1a1130;
+  --panel: #2a1f4a;
+  --accent: #ff5252;
+  --accent2: #ffb300;
+  --good: #4caf50;
+  --text: #f5f0ff;
+  --muted: #b9aee0;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #3a2168, var(--bg));
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  user-select: none;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 12px;
+}
+
+/* ===== 상단 상태 표시줄 ===== */
+#status-bar {
+  display: flex;
+  gap: 8px;
+}
+.stat {
+  flex: 1;
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 8px 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.25);
+}
+.stat-label { font-size: 12px; color: var(--muted); }
+.stat-value { font-size: 22px; font-weight: 800; }
+.stat-sub { font-size: 10px; color: var(--muted); }
+
+/* 시간/기회 경고 색 */
+#stat-time.warn .stat-value,
+#stat-chances.warn .stat-value { color: var(--accent); animation: pulse 0.6s infinite; }
+
+@keyframes pulse { 50% { opacity: 0.4; } }
+
+/* ===== 무대 (상사 캐릭터) ===== */
+#game-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+#stage {
+  flex: 1;
+  position: relative;
+  background: var(--panel);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+#speech-bubble {
+  background: #fff;
+  color: #222;
+  font-weight: 700;
+  font-size: clamp(15px, 4.4vw, 19px);
+  padding: 12px 16px;
+  border-radius: 16px;
+  max-width: 90%;
+  text-align: center;
+  position: relative;
+  line-height: 1.35;
+}
+#speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-top-color: #fff;
+  border-bottom: 0;
+}
+
+#boss { text-align: center; transition: transform 0.25s ease; }
+#boss-face { font-size: clamp(70px, 22vw, 110px); line-height: 1; transition: transform 0.15s; }
+#boss-body { font-size: clamp(40px, 12vw, 60px); margin-top: -8px; }
+
+/* 상사 상태별 애니메이션 */
+#boss.nagging { animation: nag-shake 0.5s infinite; }
+#boss.flustered #boss-face { animation: spin-wobble 0.4s; }
+#boss.shrink { transform: scale(0.55) translateY(30px); opacity: 0.75; }
+#boss.win { animation: boss-bounce 0.5s; }
+
+@keyframes nag-shake { 0%,100%{transform:rotate(-2deg)} 50%{transform:rotate(2deg)} }
+@keyframes spin-wobble { 0%{transform:rotate(0)} 25%{transform:rotate(-15deg)} 75%{transform:rotate(15deg)} 100%{transform:rotate(0)} }
+@keyframes boss-bounce { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+
+#player-shout {
+  position: absolute;
+  bottom: 14px;
+  font-size: clamp(20px, 6vw, 28px);
+  font-weight: 900;
+  color: var(--accent2);
+  text-shadow: 2px 2px 0 #000;
+  animation: shout-pop 0.3s;
+}
+@keyframes shout-pop { from{transform:scale(0.4);opacity:0} to{transform:scale(1);opacity:1} }
+
+/* ===== 상태 배너 ===== */
+#state-banner {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(16px, 4.6vw, 20px);
+  padding: 12px;
+  border-radius: 14px;
+  transition: background 0.2s;
+}
+.banner-idle { background: #4a3a7a; }
+.banner-nag  { background: #7a3a3a; }        /* 잔소리 중 - 붉은 계열 */
+.banner-win  { background: var(--good); color:#fff; }  /* 성공 - 초록 */
+.banner-lose { background: #333; color: var(--accent); } /* 실패 - 어둡게 */
+
+/* ===== 바 (게이지 / 타이머) ===== */
+.bar-wrap { display: flex; flex-direction: column; gap: 4px; }
+.bar-label { font-size: 13px; color: var(--muted); display:flex; justify-content:space-between; }
+.bar-track {
+  height: 16px;
+  background: #0d0820;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.bar-track.big { height: 28px; }
+
+.round-fill { height: 100%; width: 100%; background: var(--accent2); transition: width 0.1s linear; }
+.gauge-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--good));
+  transition: width 0.08s linear;
+}
+
+/* ===== 버튼 ===== */
+.big-btn {
+  border: none;
+  border-radius: 18px;
+  font-family: inherit;
+  font-weight: 900;
+  color: #fff;
+  background: var(--accent);
+  padding: 20px;
+  font-size: clamp(20px, 6vw, 26px);
+  cursor: pointer;
+  box-shadow: 0 6px 0 #b53030;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
+.big-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #b53030; }
+.big-btn:disabled { opacity: 0.45; box-shadow: 0 6px 0 #555; cursor: not-allowed; }
+
+.big-btn.tap {
+  background: linear-gradient(180deg, #ff7043, var(--accent));
+  padding: 26px;
+  font-size: clamp(24px, 7vw, 32px);
+}
+
+/* ===== 오버레이 (시작 / 결과) ===== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(20, 12, 40, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  gap: 18px;
+}
+.overlay h1 { font-size: clamp(28px, 8vw, 40px); line-height: 1.2; }
+.desc { color: var(--muted); line-height: 1.6; font-size: 15px; }
+.rules {
+  list-style: none;
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#result-emoji { font-size: 90px; animation: boss-bounce 0.6s; }
+#result-desc { color: var(--muted); line-height: 1.6; font-size: 16px; }
+
+.hidden { display: none !important; }
