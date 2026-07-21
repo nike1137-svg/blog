@@ -1,6 +1,6 @@
 ---
 title: "오늘의 용어 정리 — 에이전트 연장통(MCP·CLI·스킬·훅·AGENTS.md)과 Kimi K3"
-date: 2026-07-21 20:00:00 +0900
+date: 2026-07-21 13:00:00 +0900
 categories: [일지, 용어정리]
 tags: [MCP, CLI, 스킬, 훅, AGENTS.md, LSP, 플러그인, KimiK3, 아레나]
 description: 에이전트를 '강하게 부리는' 데 필요한 용어들을 정의+비유+예시로 정리한다. AI를 내 데이터에 꽂는 MCP부터, 반복을 외워두는 스킬, 그리고 이번 주 화제인 Kimi K3까지.
