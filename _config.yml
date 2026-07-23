@@ -14,7 +14,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 조경호의 학습 일지 # the main title
+title: Marcus의 학습 일지 # the main title
 
 tagline: 시니어케어에서 AI로, 매일의 배움 기록 # it will display as the subtitle
 
@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
 url: "https://nike1137-svg.github.io"
 
 github:
-  username: nike1137-svg # change to your GitHub username
+  username: # (제거됨 — GitHub 계정 비연결)
 
 twitter:
   username: # change to your Twitter username
@@ -34,12 +34,12 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 조경호
+  name: Marcus
   email: # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/nike1137-svg # change to your GitHub homepage
+    # (GitHub 링크 제거됨 — 개인정보 비연결)
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
