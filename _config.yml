@@ -39,7 +39,7 @@ social:
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
-    # (GitHub 링크 제거됨 — 개인정보 비연결)
+    - https://nike1137-svg.github.io/blog/ # 저작권 링크: GitHub 프로필 대신 블로그 홈
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
