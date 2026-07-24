@@ -1,7 +1,7 @@
 ---
 title: "목업 화면에 백엔드를 붙여 배포까지 — 병원동행 앱 만든 과정"
 date: 2026-07-16 22:30:00 +0900
-categories: [프로젝트]
+categories: [프로젝트, 과제]
 tags: [nextjs, supabase, 백엔드, 배포, github-pages, 보안]
 ---
 
