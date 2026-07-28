@@ -1,7 +1,7 @@
 ---
 title: "문은 두 개, 방은 하나"
 date: 2026-07-24 21:00:00 +0900
-categories: [일지, 도구]
+categories: [일지, 실습]
 tags: [PyTorch, MNIST, Colab, GPU, 딥러닝]
 description: "딥러닝용 GPU가 없는 노트북으로 원격 GPU를 빌려, 같은 실험을 두 개의 문(브라우저·터미널)으로 돌려본 하루."
 ---
