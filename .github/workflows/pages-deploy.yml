@@ -9,6 +9,12 @@ on:
       - README.md
       - LICENSE
 
+  # 예약 발행용 재빌드 — 매주 수요일 01:00 UTC (KST 10:00)
+  # Jekyll 은 미래 날짜 글을 빌드에서 제외하므로, 발행일이 지난 뒤 한 번 더
+  # 빌드해야 글이 올라간다. 이 스케줄이 그 역할을 한다.
+  schedule:
+    - cron: "0 1 * * 3"
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
