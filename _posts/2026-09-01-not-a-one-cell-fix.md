@@ -2,7 +2,7 @@
 title: "셀 하나 고치면 되는 일이 아니었다 — 클론해 둔 저장소를 실제로 돌아가게 만들기까지"
 date: 2026-09-01 23:00:00 +0900
 categories: [일지, 도구]
-tags: [VSCode, WSL, uv, 가상환경, 인코딩, transformers, Jupyter, 환경설정]
+tags: [VSCode, WSL, uv, 가상환경, 인코딩, Transformers, Jupyter, 환경설정]
 description: "저장소는 이미 클론해 뒀는데 그걸 열 도구가 없었다. VS Code를 깔고 교재 예제를 돌리려다 인코딩·의존성·메모리에서 차례로 막혔다. 오늘 한 건 실습이 아니라 실습을 할 수 있게 만드는 일이었다."
 ---
 

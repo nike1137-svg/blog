@@ -2,7 +2,7 @@
 title: "자를 또 잘못 만들었다 — 놀이터를 알갱이 296만 개로 만들어 웹에 올린 날"
 date: 2026-08-11 07:00:00 +0900
 categories: [일지, 실습]
-tags: [가우시안스플래팅, MapAnything, threejs, Spark, Colab, SOG, 성능측정, GitHubPages, 실습]
+tags: [가우시안스플래팅, MapAnything, threejs, Spark, Colab, SOG, 성능측정, GitHub Pages, 실습]
 description: 폰으로 찍은 33초 영상 하나에서 색을 가진 3차원 점 296만 개를 뽑아 웹 주소에 올렸다. 그런데 만드는 것보다 어려웠던 건, 잘 됐는지 재는 자를 제대로 만드는 일이었다. 어제 배운 걸 하루 만에 또 틀렸다.
 ---
 
