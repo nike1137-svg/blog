@@ -30,3 +30,12 @@ assets/js/dist
 *~
 .DS_Store
 Thumbs.db
+
+# 비밀값 차단 — 키·환경변수 파일이 공개 저장소에 올라가지 않도록 (2026-09-13)
+.env
+.env.*
+*.env
+secrets*
+*.key
+*.pem
+id_rsa*
