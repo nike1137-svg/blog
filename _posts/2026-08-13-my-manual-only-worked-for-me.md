@@ -183,4 +183,3 @@ README에 "`~` 에 받으세요" 라고 한 줄 적혀 있긴 했다. 그런데 
 
 정답 전사문이 없어도, 어머님 대화를 저장하지 않아도, "전사가 몇 번 실패했나"는 셀 수 있다. 하루 미뤘지만 그 사이에 **남이 쓸 수 있는 물건**이 됐으니 손해는 아니다.
 
-코드와 문서는 여기 있다 — [poc-elder-care-local-ai](https://github.com/nike1137-svg/poc-elder-care-local-ai)

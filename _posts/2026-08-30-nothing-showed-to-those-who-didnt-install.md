@@ -136,4 +136,4 @@ description: 파이프라인도 출처 칩도 판정 배지도 다 만들었는�
 
 거기에 이번 것 하나를 얹어 갈 생각이다. **자료에 없으면 없다고 말하게 만드는 일.** 어르신에게 잘못된 정보를 주는 건 대답을 못 하는 것보다 나쁘다. 긴급 감지를 AI 판단에 맡기지 않고 키워드 규칙으로 두기로 한 것과 같은 이유다.
 
-만든 것은 여기 있다 — [Rag_guide_chatbot](https://github.com/nike1137-svg/Rag_guide_chatbot) · [열어보기](https://nike1137-svg.github.io/Rag_guide_chatbot/)
+만든 것은 설치 없이 여기서 쓸 수 있다 — [chat.dodami-ai.com](https://chat.dodami-ai.com)

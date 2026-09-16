@@ -154,4 +154,3 @@ description: 어르신 안내 챗봇을 만들며 "코스피 지수가 얼마예
 
 다음 글은 그 이야기다. 만드는 걸 끝냈다고 생각한 지점과 실제로 끝난 지점 사이의 거리에 대해.
 
-코드와 문서는 여기 있다 — [Rag_guide_chatbot](https://github.com/nike1137-svg/Rag_guide_chatbot)
