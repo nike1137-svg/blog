@@ -19,16 +19,14 @@ mermaid: true
 ## 1. 열 노드를 한 장에
 
 ```mermaid
-flowchart LR
+flowchart TD
   subgraph L["수업"]
-    direction TB
     a1["LangGraph 워크플로 설계"] --> a2["뉴스레터 — 수집부터 발행"]
     a2 --> a4["고객 응대 — 라우팅 · 그라운딩"]
     a4 --> a6["영화 추천 — GraphRAG"]
     a6 --> a8["딥리서치 — 오케스트레이션"]
   end
   subgraph R["내 프로젝트"]
-    direction TB
     p3["1인 창업 지원 뉴스"] --> p5["예비창업패키지 공고 안내"]
     p5 --> p7["한국 축구 지식 그래프"]
     p7 --> p9["시니어 건강 조사팀"]
